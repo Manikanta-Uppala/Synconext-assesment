@@ -1,0 +1,44 @@
+<h1>Multiple Filtering</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" name = "lat" [(ngModel)] = "lat" (ngModelChange) = "searchbylat()"
+                placeholder="Enter Latitude Number To Search"> <br>
+                <input type="text" class="form-control" name = "long" [(ngModel)] = "long" (ngModelChange) = "searchbylong()"
+                placeholder="Enter Longitude Number To Search"> 
+            </div>
+        </div>
+    </div>
+   <br>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <!-- <th>ID</th> -->
+                        <th>BUILDING</th>
+                        <!-- <th>CITY</th>
+                        <th>STATE</th> -->
+                        <th>LATITUDE</th>
+                        <th>LONGITUDE</th>
+                        <!-- <th>PHONE</th>
+                        <th>EMAIL</th> -->
+                    </tr>
+                </thead>
+               <tbody>
+                   <tr *ngFor = "let user of users">
+                       <!-- <td>{{user.id}}</td> -->
+                       <td>{{user.building}}</td>
+                       <!-- <td>{{user.city}}</td>
+                       <td>{{user.state}}</td> -->
+                       <td>{{user.lat}}</td>
+                       <td>{{user.long}}</td>
+                       <!-- <td>{{user.phon}}</td>
+                       <td>{{user.email}}</td> -->
+                   </tr>
+               </tbody> 
+            </table>
+           </div>
+       </div>
+   </div>
